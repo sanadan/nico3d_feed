@@ -2,7 +2,7 @@
 ニコニ立体の新着をatomフィードにします。
 
 ## Install
-For Ubuntu 16.04 and apache
+For Ubuntu 18.04 and apache
 
 ```sh
 $ cd /var/www 
@@ -19,5 +19,5 @@ $ sudo ./setup
 MIT
 
 ## Copyright
-Copyright 2015-2017 sanadan <jecy00@gmail.com>
+Copyright 2015-2019 sanadan <jecy00@gmail.com>
 
