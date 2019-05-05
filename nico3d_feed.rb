@@ -4,7 +4,7 @@ require 'rss'
 require 'mechanize'
 
 $title = '新着 - ニコニ立体'
-$uri = 'http://3d.nicovideo.jp/search'
+$uri = 'https://3d.nicovideo.jp/search'
 $about = $uri
 $description = 'ニコニ立体の新着をFeedにします。'
 $author = 'sanadan'
@@ -18,7 +18,7 @@ def main
     item[ 'link' ] = URI.join( 'http://3d.nicovideo.jp', data.at( 'a' )[ 'href' ] ).to_s
     item[ 'title' ] = data.at( '.work-box-title' ).text
     author = data.at( '.work-box-author' ).text
-    thumbnail = URI.join( 'http://3d.nicovideo.jp', data.at( 'img' )[ 'src' ] ).to_s
+    thumbnail = URI.join('https://3d.nicovideo.jp', data.at('img')['src']).to_s
     item[ 'content' ] = "<a href=\"#{item[ 'link' ]}\"><img src=\"#{thumbnail}\" border=\"0\">#{item[ 'title' ]}</a> / #{author}"
     item[ 'date' ] = Time.now
 
