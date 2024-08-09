@@ -15,7 +15,7 @@ def main
 
   page.search( '.work-box' ).each do |data|
     item = {}
-    item[ 'link' ] = URI.join( 'http://3d.nicovideo.jp', data.at( 'a' )[ 'href' ] ).to_s
+    item['link'] = URI.join('https://3d.nicovideo.jp', data.at('a')['href']).to_s
     item[ 'title' ] = data.at( '.work-box-title' ).text
     author = data.at( '.work-box-author' ).text
     thumbnail = URI.join('https://3d.nicovideo.jp', data.at('img')['src']).to_s
